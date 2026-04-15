@@ -1,12 +1,15 @@
 package br.com.alura.adopet.api.service;
 
+import br.com.alura.adopet.api.service.email.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EmailService {
+@Profile("producao")
+public class EmailServiceProducao implements EmailService {
 
     @Autowired
     private JavaMailSender emailSender;
@@ -19,4 +22,5 @@ public class EmailService {
         email.setText(message);
         emailSender.send(email);
     }
+
 }

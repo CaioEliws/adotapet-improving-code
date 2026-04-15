@@ -1,21 +1,19 @@
 package br.com.alura.adopet.api.service;
 
-import br.com.alura.adopet.api.dto.AprovacaoAdocaoDTO;
-import br.com.alura.adopet.api.dto.ReprovacaoAdocaoDTO;
-import br.com.alura.adopet.api.dto.SolicitacaoAdocaoDTO;
-import br.com.alura.adopet.api.exception.ValidacaoException;
+import br.com.alura.adopet.api.dto.adocao.AprovacaoAdocaoDTO;
+import br.com.alura.adopet.api.dto.adocao.ReprovacaoAdocaoDTO;
+import br.com.alura.adopet.api.dto.adocao.SolicitacaoAdocaoDTO;
 import br.com.alura.adopet.api.model.Adocao;
 import br.com.alura.adopet.api.model.Pet;
-import br.com.alura.adopet.api.model.StatusAdocao;
 import br.com.alura.adopet.api.model.Tutor;
 import br.com.alura.adopet.api.repository.AdocaoRepository;
 import br.com.alura.adopet.api.repository.PetRepository;
 import br.com.alura.adopet.api.repository.TutorRepository;
-import br.com.alura.adopet.api.validation.ValidacaoSolicitacaoAdocao;
+import br.com.alura.adopet.api.service.email.EmailService;
+import br.com.alura.adopet.api.validation.adocao.ValidacaoSolicitacaoAdocao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
