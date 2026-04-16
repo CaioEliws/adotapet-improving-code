@@ -30,14 +30,14 @@ public class CalculadoraProbabilidadeAdocao {
         if (tipo == TipoPet.CACHORRO && peso > 15) {
             nota -= 2;
         }
+
         if (tipo == TipoPet.GATO && peso > 10) {
             nota -= 2;
         }
 
         if (idade >= 15) {
             nota -= 5;
-        }
-        if (idade >= 10) {
+        } else if (idade >= 10) {
             nota -= 4;
         }
 
