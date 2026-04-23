@@ -1,14 +1,14 @@
-package br.com.alura.adopet.api.validation.adocao;
+package br.com.alura.adopet.api.validation.pet;
 
 import br.com.alura.adopet.api.dto.adocao.SolicitacaoAdocaoDTO;
 import br.com.alura.adopet.api.exception.ValidacaoException;
 import br.com.alura.adopet.api.model.Pet;
 import br.com.alura.adopet.api.repository.PetRepository;
+import br.com.alura.adopet.api.validation.adocao.ValidacaoSolicitacaoAdocao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
-@Component("validacaoPetDisponivelAdocao")
+@Component("validacaoPetDisponivelPet")
 public class ValidacaoPetDisponivel implements ValidacaoSolicitacaoAdocao {
 
     @Autowired
